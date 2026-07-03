@@ -379,8 +379,9 @@
           </div>
         </div>
       </div>
-      <script id="js-meo-script-review-hp" charset="UTF-8" async src="https://dev-app.meo-dash.com/review_hp/groups/2177/schema.js" type="text/javascript"></script>
-      <!-- <script id="js-meo-script-review-hp" charset="UTF-8" async src="https://pagetemplate.vercel.app/review_hp/groups/1573/schema.js" type="text/javascript"></script> -->
+      <!-- Partner widget — published via /admin and loaded from Supabase (row id=1)
+           at runtime, injected here and executed like the hard-coded <script> it replaces. -->
+      <div data-hp-embed></div>
     </section>
   </main>
 
@@ -475,5 +476,7 @@
   </div>
 
   <script src="/assets/js/main.js" defer></script>
+  <!-- Dynamic partner-embed loader (fetches row id=1 from Supabase, runs like hard-coded) -->
+  <script src="/assets/js/hp-embed.js" defer></script>
 </body>
 </html>
